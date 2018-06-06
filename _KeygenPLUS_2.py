@@ -45,3 +45,20 @@ print (eGuest)
 #remember, print statements are also calling the function. if active above, 
 #would ask for id and address twice... as done above, merge has first & only call on both functions
 #keep going....
+
+#BELOW CODE FROM HVTC-EGUEST FINAL.PY
+with open('eGuestNEW.csv', 'a', newline='') as csvfile:
+#function open ('filename.CSV),r-read,w-write-a-append (add to) as filetype csvfile:
+#use with because it implicitly calls a file close for the file when done
+        fieldnames = ['Visit_Date','Guest_ID','Guest_Name','Guest_Address','Member_Name']
+#fieldnames function defines ROW 1 in spreadsheet, column headers in single quotes in form of a list
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+#dictwriter is a dictionary utility function for python created csv files...transcribes a python dictionary to csv file
+        writer.writeheader()
+#if this line not included, will take first line of data as ROW 1...is optional with dictwriter but required otherwise
+        for a in range (0,total_guests):
+                writer.writerow({'Visit_Date':visit_date(),'Guest_ID':guest_ID(),'Guest_Name':guest_name(),\
+                'Guest_Address':guest_address(),'Member_Name':member_name()\
+                })
+#there is 1 and only 1 set of function calls at the end when writing csv to disk...otherwise will call a second time
+#at the end and overwrite original data input by user
