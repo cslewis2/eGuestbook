@@ -14,17 +14,38 @@ for i in range (0,total_guests):
         guest_date=(date.today())
         return guest_date
 
-    def guest_ID():
-        """generates a nonrandom 5 digit number to use as guestID"""
-        rnd_ID=((str(randint(10000,99999))))
-        return rnd_ID
+    #def guest_ID():
+    #    """generates a nonrandom 5 digit number to use as guestID"""
+    #    rnd_ID=((str(randint(10000,99999))))
+    #    return rnd_ID
 
+    def guest_ID():
+        """generates a list of lists with 4 digit id + 4xlast name as list of lists"""    
+        finalkeys=[]
+        #keynum=(int(input('how many keys do you need?  ')))
+        #for i in range (0,keynum):
+        first=(str.capitalize(input('guest first name?  ')))
+        last=(str.capitalize(input('guest last name?  ')))
+        keyid=(((str(randint(1000,9999))+last[0:4])))
+        finalkeys.append(keyid)
+        full_name=(first,last)
+        return finalkeys,full_name
     def guest_name():
-        """generates merged member first and last names"""
-        guest_first=(str.capitalize(input('guest first name?  ')))
-        guest_last=(str.capitalize(input('guest last name?  ')))
-        guest_name_merge=(' '.join([guest_first,guest_last]))
-        return guest_name_merge
+        fullname=(guest_ID()[1])
+        #name_merge=(' '.join (fullname[0],fullname[1]))
+        return fullname #name_merge
+#this is the first call for this function
+#CSV file creation is second call this is why when only one id needed asks for first and last name twice. 
+#have to get rid of the above call and get this down to 1 call only. 
+#may need to separate name creation from ID or just go with a single id number??
+#there has to be a simple fix i'm not seeing right now...
+
+    #def guest_name():
+    #    """generates merged member first and last names"""
+    #    guest_first=(str.capitalize(input('guest first name?  ')))
+    #    guest_last=(str.capitalize(input('guest last name?  ')))
+    #    guest_name_merge=(' '.join([guest_first,guest_last]))
+    #    return guest_name_merge
 
     def guest_address():
         """generates guest address"""
