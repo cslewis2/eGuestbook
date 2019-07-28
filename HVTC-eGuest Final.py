@@ -1,8 +1,11 @@
+##DO NOT USE THIS CODE!!!
+##THIS FILE IS NOT FINAL APP. GENERATES MEMBER IDs AND HAS LOGICAL ERROR WITH FN CALLS...
+
 from random import randint
 from datetime import date
 import csv
 
-"""Simple guest card generates todays date, guest ID, guest name,guest address and member name then stores everything in eGuestNEW.csv"""
+"""Simple guest card generates todays date, guest ID, guest name,guest address and member name then stores everything in eGuestFinal.csv"""
 
 print ('HVTC GUEST eCARD')
 print ('Todays date is ',(date.today()))
@@ -59,7 +62,7 @@ for i in range (0,total_guests):
         member_name_merge=(' '.join([member_first,member_last]))
         return member_name_merge
 
-with open('eGuestNEW332.csv', 'a', newline='') as csvfile:
+with open('eGuestFinal.csv', 'a', newline='') as csvfile:
 #function open ('filename.CSV),r-read,w-write-a-append (add to) as filetype csvfile:
 #use with because it implicitly calls a file close for the file when done
         fieldnames = ['Visit_Date','Guest_ID','Guest_Name','Guest_Address','Member_Name']
