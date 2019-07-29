@@ -1,9 +1,10 @@
+###WORK FROM THIS CODE AS OF 7/28/2019
 
 from random import randint
 from datetime import date
 import csv
-
-"""Simple guest card generates todays date, guest ID, guest name,guest address and member name then stores everything in eGuestNEW.csv"""
+import json
+"""Simple guest card generates todays date, guest ID, guest name,guest address and member name then stores everything in eGuestREDO.csv"""
 
 print ('HVTC GUEST eCARD')
 print ('Todays date is ',(date.today()))
@@ -32,7 +33,7 @@ for i in range (0,total_guests):
         member_last=(str.capitalize(input('member last name?  ')))
         member_name_merge=(' '.join([member_first,member_last]))
         return member_name_merge
-with open('eGuestNEW32a.csv', 'a', newline='') as csvfile:
+with open('eGuestREDO.csv', 'a', newline='') as csvfile:
 #function open ('filename.CSV),r-read,w-write-a-append (add to) as filetype csvfile:
 #use with because it implicitly calls a file close for the file when done
         fieldnames = ['Visit_Date','Guest_Name','Guest_Address','Member_Name']
@@ -46,4 +47,3 @@ with open('eGuestNEW32a.csv', 'a', newline='') as csvfile:
                 'Guest_Address':guest_address(),'Member_Name':member_name()\
                 })
 #there is 1 and only 1 set of function calls at the end when writing csv to disk...otherwise will call a second time
-#at the end and overwrite original data input by user
