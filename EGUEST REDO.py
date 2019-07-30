@@ -21,9 +21,15 @@ for i in range (0,total_guests):
         guest_name_merge=' '.join([guest_first,guest_last])
         return guest_name_merge #name_merge
 
+        def guest_fname():
+            pass
+        def guest_lname():
+            pass
+
     def guest_address():
         """generates guest address"""
-        address=((input('what is guests address?  ')))
+        address=(input('what is guests street address?  '))
+        #city_state=(input('what is guest city and state?  '))
         return address
 
     def member_name():
