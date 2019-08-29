@@ -1,9 +1,8 @@
-###WORK FROM THIS CODE AS OF 7/28/2019
-
+##WORK FROM THIS CODE AS OF 7/28/2019
 from random import randint
 from datetime import date
 import csv
-import json
+
 """Simple guest card generates todays date, guest ID, guest name,guest address and member name then stores everything in eGuestREDO.csv"""
 
 print ('HVTC GUEST eCARD')
@@ -22,9 +21,15 @@ for i in range (0,total_guests):
         guest_name_merge=' '.join([guest_first,guest_last])
         return guest_name_merge #name_merge
 
+        def guest_fname():
+            pass
+        def guest_lname():
+            pass
+
     def guest_address():
         """generates guest address"""
-        address=((input('what is guests address?  ')))
+        address=(input('what is guests street address?  '))
+        #city_state=(input('what is guest city and state?  '))
         return address
 
     def member_name():
@@ -47,3 +52,4 @@ with open('eGuestREDO.csv', 'a', newline='') as csvfile:
                 'Guest_Address':guest_address(),'Member_Name':member_name()\
                 })
 #there is 1 and only 1 set of function calls at the end when writing csv to disk...otherwise will call a second time
+#at the end and overwrite original data input by user
