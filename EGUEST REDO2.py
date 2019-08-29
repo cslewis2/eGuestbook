@@ -1,5 +1,5 @@
-
-
+#test test testt
+#C:\Users\clarence\source\repos\eGuestbook\EGUEST REDO2.py
 ##WORK FROM THIS CODE AS OF 7/28/2019
 from random import randint
 from datetime import date
@@ -14,7 +14,7 @@ print ('Todays date is ',(date.today()))
 total_guests=(int(input('how many guests today?  ')))
 for i in range (0,total_guests):
     def visit_date():
-        """generates datestamp comprising todays date"""        
+        """generates datestamp comprising todays date"""
         guest_date=(date.today())
         return guest_date
 
