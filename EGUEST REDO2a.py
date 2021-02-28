@@ -1,6 +1,6 @@
-#test test testt!!! THIS SHOULD BE UPLOADED TO GITHUB...again
+#test test testt!!RETURN TO GITHUB
 #C:\Users\clarence\source\repos\eGuestbook\EGUEST REDO2.py
-##WORK FROM THIS CODE AS OF 7/29/2019
+##WORK FROM THIS CODE AS OF 7/29/2019 THRU 2-15-21
 from random import randint
 from datetime import date
 import csv
