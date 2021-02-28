@@ -1,4 +1,4 @@
-#test test testt!!RETURN TO GITHUB
+#test test testt!!RETURN TO GITHUB-again...see line 42 string to str
 #C:\Users\clarence\source\repos\eGuestbook\EGUEST REDO2.py
 ##WORK FROM THIS CODE AS OF 7/29/2019 THRU 2-15-21
 from random import randint
@@ -39,7 +39,7 @@ for i in range (0,total_guests):
     
     def guest_city():
         '''generates guest city'''
-        city=(string.capitalize(input('what city is guest from?  ')))
+        city=(str.capitalize(input('what city is guest from?  ')))
         return city
 
     def guest_state():
