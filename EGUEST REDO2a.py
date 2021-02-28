@@ -1,4 +1,4 @@
-#test test testt!!! THIS SHOULD BE UPLOADED TO GITHUB
+#test test testt!!! THIS SHOULD BE UPLOADED TO GITHUB...
 #C:\Users\clarence\source\repos\eGuestbook\EGUEST REDO2.py
 ##WORK FROM THIS CODE AS OF 7/29/2019
 from random import randint
