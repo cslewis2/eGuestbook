@@ -1,6 +1,7 @@
-from random import randint
 import datetime
 import json
+from random import randint
+import os.path
 
 #this works....
 #def fullname ():
@@ -35,10 +36,12 @@ def fullname ():
         gst_addr=input('what is guest address?  ')
         return gst_addr
     def member_name():
-        mem_name=input('what is member name?  ')
+        mem_name=input('what is members first and last name [format==first last]?  ')
         return mem_name
-    return {idnum():(lname,fname,guest_address(),member_name())}
+    return {idnum():(lname,fname,guest_address(),member_name())}#same as iguestredo2=single set of calls at end to capture user input data
 
+
+file_exists=os.path.isfile('eGuestREDO2.csv')
 
 datalist={}
 for num in range(0,namenum):
