@@ -12,7 +12,7 @@
 *.docx
 *.docs
 *.ppt
-*json
+*.json
 
 
 
