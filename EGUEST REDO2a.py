@@ -1,4 +1,5 @@
-#saves not being finalized in droid edit thru Mgit...save changes straight thru Pydroid?
+#new github credentials? 3-24-21
+#ssaves not being finalized in droid edit thru Mgit...save changes straight thru Pydroid?
 #original eguestbook
 from random import randint
 from datetime import date
