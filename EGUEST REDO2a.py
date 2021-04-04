@@ -1,7 +1,4 @@
-#just PUSH IT and be done...success!
-#test test testt!!RETURN TO GITHUB-again...see line 42 string to str
-#C:\Users\clarence\source\repos\eGuestbook\EGUEST REDO2.py
-##WORK FROM THIS CODE AS OF 7/29/2019 THRU 2-15-21
+
 from random import randint
 from datetime import date
 import csv
@@ -18,12 +15,6 @@ for i in range (0,total_guests):
         """generates datestamp comprising todays date"""
         guest_date=(date.today())
         return guest_date
-
-    #def guest_name():
-    #    guest_first=(str.capitalize(input('guest first name?  ')))
-    #    guest_last=(str.capitalize(input('guest last name?  ')))
-    #    guest_name_merge=' '.join([guest_first,guest_last])
-    #    return guest_name_merge #name_merge
 
     def guest_fname():
         guest_first=(str.capitalize(input('guest first name?  ')))           
@@ -75,8 +66,4 @@ with open('eGuestREDO2.csv', 'a', newline='') as csvfile:
                 })
 #there is 1 and only 1 set of function calls at the end of scrit when writing 
 #csv to disk...otherwise will call a second #time at the end and overwrite
-#original data input by user      member_last=(str.capitalize(input('member last name?  ')))
-        member_name_merge=(' '.join([member_first,member_last]))
-        return member_name_merge
-
-file_exists=os.path.isfile('eGuestREDO2.csv')
+#original data input by user
