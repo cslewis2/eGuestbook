@@ -31,6 +31,11 @@ for i in range (0,total_guests):
 
     def guest_lname():
         guest_last=(str.capitalize(input('guest last name?  ')))        
+        def idnum ():
+            numb=str(randint(1000,9999))
+            jtemp=(numb,guest_lname[:4].upper())
+            idp=''.join(jtemp)
+        return idp
         return guest_last
 
     def guest_address():
@@ -64,10 +69,14 @@ with open('eGuestREDO2.csv', 'a', newline='') as csvfile:
             writer.writeheader()
 
         for a in range (0,total_guests):
-                writer.writerow({'Visit_Date':visit_date(),'Guest_Fname':guest_fname(),\
+                writer.writerow({'u_id':guest_lanme.idp(),Visit_Date':visit_date(),'Guest_Fname':guest_fname(),\
                 'Guest_Lname':guest_lname(),'Guest_Address':guest_address(),\
                 'Guest_City':guest_city(),'Guest_State':guest_state(),'Member_Name':member_name()\
                 })
 #there is 1 and only 1 set of function calls at the end of scrit when writing 
 #csv to disk...otherwise will call a second #time at the end and overwrite
-#original data input by user
+#original data input by user      member_last=(str.capitalize(input('member last name?  ')))
+        member_name_merge=(' '.join([member_first,member_last]))
+        return member_name_merge
+
+file_exists=os.path.isfile('eGuestREDO2.csv')

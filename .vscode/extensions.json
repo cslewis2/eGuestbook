@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "kamilwoniak.python-project-scaffold-generator",
+        "njpwerner.autodocstring",
+        "almenon.arepl"
+    ]
+}
