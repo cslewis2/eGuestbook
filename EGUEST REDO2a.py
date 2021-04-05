@@ -21,13 +21,13 @@ for i in range (0,total_guests):
         return guest_first
 
     def guest_lname():
-        guest_last=(str.capitalize(input('guest last name?  ')))        
-        def idnum ():
+        guest_last=(str.capitalize(input('guest last name?  ')))
+        def idnum():
             numb=str(randint(1000,9999))
-            jtemp=(numb,guest_lname[:4].upper())
+            jtemp=(numb,guest_last[:4].upper())
             idp=''.join(jtemp)
-        return idp
-    return guest_last
+            return(idp)
+        return(idnum(),guest_last)
 
     def guest_address():
         """generates guest address"""
@@ -54,16 +54,16 @@ for i in range (0,total_guests):
 file_exists=os.path.isfile('eGuestREDO2.csv')
 
 with open('eGuestREDO2.csv', 'a', newline='') as csvfile:
-        fieldnames = ['Visit_Date','Guest_Fname','Guest_Lname','Guest_Address','Guest_City','Guest_State','Member_Name']
+        fieldnames = ['Guest_ID','Visit_Date','Guest_Fname','Guest_Lname','Guest_Address','Guest_City','Guest_State','Member_Name']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         if not file_exists:
             writer.writeheader()
-
+# in the writer function below, guest_lname called twice due to calling the indices from last name function,leading to 2 different last names...how do i solve this one???
         for a in range (0,total_guests):
-                writer.writerow({'u_id':idnum(),'Visit_Date':visit_date(),'Guest_Fname':guest_fname(),\
-                'Guest_Lname':guest_lname(),'Guest_Address':guest_address(),\
+                writer.writerow({'Guest_ID':guest_lname()[0],'Visit_Date':visit_date(),'Guest_Fname':guest_fname(),\
+                'Guest_Lname':guest_lname()[1],'Guest_Address':guest_address(),\
                 'Guest_City':guest_city(),'Guest_State':guest_state(),'Member_Name':member_name()\
                 })
-#there is 1 and only 1 set of function calls at the end of scrit when writing 
+#there is 1 and only 1 set of function calls at the end of script when writing 
 #csv to disk...otherwise will call a second #time at the end and overwrite
 #original data input by user
