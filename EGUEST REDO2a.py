@@ -26,8 +26,8 @@ for i in range (0,total_guests):
             numb=str(randint(1000,9999))
             jtemp=(numb,guest_lname[:4].upper())
             idp=''.join(jtemp)
-            return idp
-        return guest_last
+        return idp
+    return guest_last
 
     def guest_address():
         """generates guest address"""
@@ -60,7 +60,7 @@ with open('eGuestREDO2.csv', 'a', newline='') as csvfile:
             writer.writeheader()
 
         for a in range (0,total_guests):
-                writer.writerow({'u_id':guest_lname.idnum(),'Visit_Date':visit_date(),'Guest_Fname':guest_fname(),\
+                writer.writerow({'u_id':idnum(),'Visit_Date':visit_date(),'Guest_Fname':guest_fname(),\
                 'Guest_Lname':guest_lname(),'Guest_Address':guest_address(),\
                 'Guest_City':guest_city(),'Guest_State':guest_state(),'Member_Name':member_name()\
                 })
