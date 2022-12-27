@@ -53,9 +53,9 @@ for i in range (0,total_guests):
         member_name_merge=(' '.join([member_first,member_last]))
         return member_name_merge
 
-file_exists=os.path.isfile('eGuestREDO2.csv')
+file_exists=os.path.isfile('eGuestREDO1225222.csv')
 
-with open('eGuestREDO2.csv', 'a', newline='') as csvfile:
+with open('eGuestREDO1225222.csv', 'a', newline='') as csvfile:
         fieldnames = ['Visit_Date','Guest_Fname','Guest_Lname','Guest_Address','Guest_City','Guest_State','Member_Name']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         if not file_exists:
