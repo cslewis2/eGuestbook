@@ -33,7 +33,7 @@ for i in range (0,total_guests):
 
     def guest_address():
         """generates guest address"""
-        address=(input('what is guests street address?  '))
+        address=(str.capitalize(input('what is guests street address?  ')))
         return address
     
     def guest_city():
