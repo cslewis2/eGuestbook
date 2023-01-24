@@ -1,6 +1,6 @@
 
-#current from desktop
-from random import randint
+#idea is to figure out how to handle no data entered, put something in that csv!
+
 from datetime import date
 import csv
 import os.path
@@ -16,12 +16,6 @@ for i in range (0,total_guests):
         """generates datestamp comprising todays date"""
         guest_date=(date.today())
         return guest_date
-
-    #def guest_name():
-    #    guest_first=(str.capitalize(input('guest first name?  ')))
-    #    guest_last=(str.capitalize(input('guest last name?  ')))
-    #    guest_name_merge=' '.join([guest_first,guest_last])
-    #    return guest_name_merge #name_merge
 
     def guest_fname():
         guest_first=(str.capitalize(input('guest first name?  ')))           
