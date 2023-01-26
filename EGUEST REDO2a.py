@@ -1,5 +1,5 @@
 
-#idea is to figure out how to handle no data entered, put something in that csv!
+#wild wild world of gui bolt on...
 from random import randint
 from datetime import date
 import csv
