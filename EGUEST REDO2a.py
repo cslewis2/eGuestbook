@@ -1,11 +1,26 @@
 
 #wild wild world of gui bolt on...
+import PySimpleGUI as sg
 from random import randint
 from datetime import date
 import csv
 import os.path
 
 """Simple guest card generates todays date, guest ID, guest name,guest address and member name then stores everything in eGuestREDO.csv"""
+
+# sg.Window(title='HVTC eGuest Book',layout=[[sg.Button('OK')]],margins=(110,50)).read()
+sg.Window(title='hvtc eGuest Book',layout=[psg.Text[('Here is some text.... and a place to enter text')]],
+sg.InputText('This is my text', key='in1')]
+#event loop
+
+while True:
+    event,values=window.read()
+    #end program if user closes window or presses OK button
+    if event=='OK' or event==sg.WIN_CLOSED:
+        break
+window.close()
+
+
 
 print ('HVTC GUEST eCARD')
 print ('Todays date is ',(date.today()))
