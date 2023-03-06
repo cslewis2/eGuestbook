@@ -7,10 +7,13 @@ import csv
 import os.path
 
 """Simple guest card generates todays date, guest ID, guest name,guest address and member name then stores everything in eGuestREDO.csv"""
-
+layout = [
+        [sg.Text('All graphic widgets in one form!', size=(30, 1), font=("Helvetica", 25))],
+        [sg.Text('Here is some text.... and a place to enter text')],
+        [sg.InputText('This is my text', key='in1')]]
 # sg.Window(title='HVTC eGuest Book',layout=[[sg.Button('OK')]],margins=(110,50)).read()
-sg.Window(title='hvtc eGuest Book',layout=[psg.Text[('Here is some text.... and a place to enter text')]],
-sg.InputText('This is my text', key='in1')]
+sg.Window[(title='hvtc eGuest Book')],layout=[sg.Text[('Here is some text.... and a place to enter text')],
+sg.InputText[('This is my text', key='in1')]
 #event loop
 
 while True:
