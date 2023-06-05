@@ -26,7 +26,7 @@ layout = [
 
     [sg.Submit(), sg.Cancel()]
 ]
-  
+  #so...[sg.Text('Guest first name',size=(15,1), sg.InputText(guest_lname())]--call function here??)
 window = sg.Window('eGuest with PySimple GUI', layout)
 event, values = window.read()
 window.close()
