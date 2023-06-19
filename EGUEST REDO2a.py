@@ -1,11 +1,30 @@
 
-#current from desktop
+#stillfunctional, 
+#wild wild world of gui bolt on...
+import PySimpleGUI as sg
 from random import randint
 from datetime import date
 import csv
 import os.path
 
 """Simple guest card generates todays date, guest ID, guest name,guest address and member name then stores everything in eGuestREDO.csv"""
+layout = [
+        [sg.Text('All graphic widgets in one form!', size=(30, 1), font=("Helvetica", 25))],
+        [sg.Text('Here is some text.... and a place to enter text')],
+        [sg.InputText('This is my text', key='in1')]]
+# sg.Window(title='HVTC eGuest Book',layout=[[sg.Button('OK')]],margins=(110,50)).read()
+sg.Window[(title='hvtc eGuest Book')],layout=[sg.Text[('Here is some text.... and a place to enter text')],
+sg.InputText[('This is my text', key='in1')]
+#event loop
+
+while True:
+    event,values=window.read()
+    #end program if user closes window or presses OK button
+    if event=='OK' or event==sg.WIN_CLOSED:
+        break
+window.close()
+
+
 
 print ('HVTC GUEST eCARD')
 print ('Todays date is ',(date.today()))
@@ -16,12 +35,6 @@ for i in range (0,total_guests):
         """generates datestamp comprising todays date"""
         guest_date=(date.today())
         return guest_date
-
-    #def guest_name():
-    #    guest_first=(str.capitalize(input('guest first name?  ')))
-    #    guest_last=(str.capitalize(input('guest last name?  ')))
-    #    guest_name_merge=' '.join([guest_first,guest_last])
-    #    return guest_name_merge #name_merge
 
     def guest_fname():
         guest_first=(str.capitalize(input('guest first name?  ')))           
