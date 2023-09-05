@@ -10,7 +10,7 @@ import PySimpleGUI as sg
 sg.theme('DarkGrey6')     
   
 # Very basic window.
-# Return values using
+# Return values using.....
 # automatic-numbered keys
 layout = [
     [sg.Text('Please enter guest Name, Address, ')],
