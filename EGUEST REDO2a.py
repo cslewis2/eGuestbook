@@ -12,7 +12,7 @@ layout = [
         [sg.Text('Here is some text.... and a place to enter text')],
         [sg.InputText('This is my text', key='in1')]]
 # sg.Window(title='HVTC eGuest Book',layout=[[sg.Button('OK')]],margins=(110,50)).read()
-sg.Window[(title='hvtc eGuest Book')],layout=[sg.Text[('Here is some text.... and a place to enter text')],
+sg.Window[(title='hvtc eGuest Book')],layout=[sg.Text[('Here is some text.... and a place to enter text')]],
 sg.InputText[('This is my text', key='in1')]
 #event loop
 
