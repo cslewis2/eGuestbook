@@ -39,17 +39,17 @@ window.close()
 #output is printed to terminal as usual, how to get to csv...!
 print(event, values[0], values[1], values[2])
 
-with open('eGuestREDOpysimp.csv', 'a', newline='') as csvfile:
-        fieldnames = ['Visit_Date','Guest_Fname','Guest_Lname','Guest_Address','Guest_City','Guest_State','Member_Name']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-        if not file_exists:
-            writer.writeheader()
+# with open('eGuestREDOpysimp.csv', 'a', newline='') as csvfile:
+#         fieldnames = ['Visit_Date','Guest_Fname','Guest_Lname','Guest_Address','Guest_City','Guest_State','Member_Name']
+#         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+#         if not file_exists:
+#             writer.writeheader()
 
-        for a in range (0,total_guests):
-                writer.writerow({'Visit_Date':visit_date(),'Guest_Fname':guest_fname(),\
-                'Guest_Lname':guest_lname(),'Guest_Address':guest_address(),\
-                'Guest_City':guest_city(),'Guest_State':guest_state(),'Member_Name':member_name()\
-                })
+#         for a in range (0,total_guests):
+#                 writer.writerow({'Visit_Date':visit_date(),'Guest_Fname':guest_fname(),\
+#                 'Guest_Lname':guest_lname(),'Guest_Address':guest_address(),\
+#                 'Guest_City':guest_city(),'Guest_State':guest_state(),'Member_Name':member_name()\
+#                 })
 
 
 
