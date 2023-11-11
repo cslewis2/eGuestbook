@@ -1,4 +1,4 @@
-
+#trying to resolve merge mismatch. branches overtaken master.
 #stillfunctional, 
 #wild wild world of gui bolt on...
 import PySimpleGUI as sg
