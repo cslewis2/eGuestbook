@@ -1,3 +1,6 @@
+#this is only a basic UI with no connection to actual functioning program...yet
+
+
 
 from datetime import date
 import csv
