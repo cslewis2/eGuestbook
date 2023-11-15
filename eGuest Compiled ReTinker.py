@@ -6,15 +6,19 @@ import PySimpleGUI as sg
 
 
 def save_contact(Visit_Date,Guest_Fname,Guest_Lname,Guest_Address,Guest_City,Guest_State,Guest_Zip,Member_Name,Staff_Initials):
-    with open('eGuestData--8877.csv', mode='a', newline='') as file:
+    file_exists=os.path.isfile('eGuestData8877.csv')
+    with open('eGuestData8877.csv', mode='a', newline='') as csvfile:
         fieldnames = ['Visit_Date','Guest_Fname','Guest_Lname','Guest_Address','Guest_City','Guest_State','Guest_Zip','Member_Name','Staff_Initials']
-        writer = csv.writer(file)
-        writer.writerow({Visit_Date,Guest_Fname,Guest_Lname,Guest_Address,Guest_City,Guest_State,Guest_Zip,Member_Name,Staff_Initials})
+        writer = csv.writer(csvfile)
+        # writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        # if not file_exists:
+        #     writer.writeheader()
+        writer.writerow([Visit_Date,Guest_Fname,Guest_Lname,Guest_Address,Guest_City,Guest_State,Guest_Zip,Member_Name,Staff_Initials])
       
 def get_contacts():
     contacts = []
-    with open('contacts.csv', mode='r') as file:
-        reader = csv.reader(file)
+    with open('eGuestData8877.csv', mode='r') as csvfile:
+        reader = csv.reader(csvfile)
         for row in reader:
             contacts.append(row)
     return contacts
@@ -36,13 +40,13 @@ def main():
     [sg.Save(), sg.Exit()]]
     
     window = sg.Window('eGuest with PySimple GUI', layout)
-    # event, values = window.read()
+    #event, values = window.read()
     # window.close()
 
     while True:
         event, values = window.read()
         if event == 'Save':
-            save_contact=(values['Visit_Date'],values['Guest_Fname'],values['Guest_Lname'],values['Guest_Address'],
+            save_contact(values['Visit_Date'],values['Guest_Fname'],values['Guest_Lname'],values['Guest_Address'],
                           values['Guest_City'],values['Guest_State'],values['Guest_Zip'],values['Member_Name'],values['Staff_Initials'])
             sg.Popup('Contact saved!')
         elif event == 'Exit':
