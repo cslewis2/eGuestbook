@@ -10,7 +10,7 @@ def save_contact(Visit_Date,Guest_Fname,Guest_Lname,Guest_Address,Guest_City,Gue
     with open('eGuestData8877.csv', mode='a', newline='') as csvfile:
         fieldnames = ['Visit_Date','Guest_Fname','Guest_Lname','Guest_Address','Guest_City','Guest_State','Guest_Zip','Member_Name','Staff_Initials']
         writer = csv.writer(csvfile)
-        # writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        # writer = csv.writer(csvfile, fieldnames=fieldnames)
         # if not file_exists:
         #     writer.writeheader()
         writer.writerow([Visit_Date,Guest_Fname,Guest_Lname,Guest_Address,Guest_City,Guest_State,Guest_Zip,Member_Name,Staff_Initials])
