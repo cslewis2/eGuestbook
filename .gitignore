@@ -268,3 +268,5 @@ paket-files/
 __pycache__/
 *.pyc
 /local branch.txt
+scratcg.py
+pysimpgui
