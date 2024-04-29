@@ -17,7 +17,7 @@ def save_contact(Visit_Date,Guest_Fname,Guest_Lname,Guest_Address,Guest_City,Gue
       
 def get_contacts():
     contacts = []
-    with open('eGuestData8877.csv', mode='r') as csvfile:
+    with open('eGuestData8877a.csv', mode='r') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
             contacts.append(row)
