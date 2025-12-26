@@ -1,5 +1,5 @@
 
-# from datetime import date
+# from datetime import date..still a problem
 import os.path
 import csv
 import PySimpleGUI as sg
@@ -7,7 +7,7 @@ import PySimpleGUI as sg
 
 def save_contact(Visit_Date,Guest_Fname,Guest_Lname,Guest_Address,Guest_City,Guest_State,Guest_Zip,Member_Name,Staff_Initials):
     file_exists=os.path.isfile('eGuestData8877.csv')
-    with open('eGuestData8877.csv', mode='a', newline='') as csvfile:
+    with open('eGuestData8877A.csv', mode='a', newline='') as csvfile:
         fieldnames = ['Visit_Date','Guest_Fname','Guest_Lname','Guest_Address','Guest_City','Guest_State','Guest_Zip','Member_Name','Staff_Initials']
         writer = csv.writer(csvfile)
         # writer = csv.writer(csvfile, fieldnames=fieldnames)
@@ -17,7 +17,7 @@ def save_contact(Visit_Date,Guest_Fname,Guest_Lname,Guest_Address,Guest_City,Gue
       
 def get_contacts():
     contacts = []
-    with open('eGuestData8877.csv', mode='r') as csvfile:
+    with open('eGuestData8877a.csv', mode='r') as csvfile:
         reader = csv.reader(csvfile)
         for row in reader:
             contacts.append(row)
